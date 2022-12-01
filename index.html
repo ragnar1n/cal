@@ -17,9 +17,26 @@
       <div class="card">
           <div class="card-content">
               <span>Add meal</span>
-
+              <form class="col">
+                  <div>
+                      <div>
+                          <input type="text" id="item-name">
+                          <label for="item-name">Meal</label>
+                      </div>
+                      <div>
+                          <input type="text" id="item-cal">
+                          <label for="item-cal">Calories</label>
+                      </div>
+                      <div>
+                          <button class="add-btn"><i class="fa fa-plus">Add Meal</i></button>
+                      </div>
+                  </div>
+              </form>
           </div>
       </div>
+
+  <h3>Total Calories: <span class="total-cal">0</span></h3>
+  <ul id="item-list"></ul>
   </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="app.js"></script>
