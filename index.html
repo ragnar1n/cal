@@ -2,43 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>CalTrack</title>
 </head>
 <body>
-  <nav>
+<!-- Navbar -->
+<nav>
     <div class="nav-wrapper blue">
-      <div class="container">
-        <a href="#" class="brand-loco center">Track cal</a>
-      </div>
+        <div class="container">
+            <a href="#" class="brand-logo center">CalTrack</a>
+        </div>
     </div>
-  </nav><br>
-  <div class="container">
-      <div class="card">
-          <div class="card-content">
-              <span>Add meal</span>
-              <form class="col">
-                  <div>
-                      <div>
-                          <input type="text" id="item-name">
-                          <label for="item-name">Meal</label>
-                      </div>
-                      <div>
-                          <input type="text" id="item-cal">
-                          <label for="item-cal">Calories</label>
-                      </div>
-                      <div>
-                          <button class="add-btn"><i class="fa fa-plus">Add Meal</i></button>
-                      </div>
-                  </div>
-              </form>
-          </div>
-      </div>
+</nav>
 
-  <h3>Total Calories: <span class="total-cal">0</span></h3>
-  <ul id="item-list"></ul>
-  </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<br>
+
+<div class="container">
+    <!-- Form Card -->
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">Add Food</span>
+            <form class="col">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input type="text" placeholder="Add Item" id="item-name">
+                        <label for="item-name">Food</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="number" placeholder="Add Calories" id="item-calories">
+                        <label for="item-calories">Calories</label>
+                    </div>
+                    <button class="add-btn btn blue darken-3"><i class="fa fa-plus"></i> Add Food</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Calorie Count -->
+    <h3 class="center-align">Total Calories: <span class="total-calories">0</span></h3>
+
+    <!-- Item List -->
+    <ul id="item-list" class="collection">
+    </ul>
+
+</div>
+
+
+
+
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
